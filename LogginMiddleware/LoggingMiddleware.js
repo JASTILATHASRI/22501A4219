@@ -49,12 +49,12 @@ async function Log(stack, level, pkg, message) {
 
     const res = await axios.post(LOG_ENDPOINT, payload);
     if (res.status === 200) {
-      console.log('✅ Log submitted:', res.data.logID);
+      console.log('Log submitted:', res.data.logID);
     } else {
-      console.warn('⚠️ Failed to log. Status:', res.status);
+      console.warn('Failed to log. Status:', res.status);
     }
   } catch (err) {
-    console.error('❌ Logging Error:', err.message);
+    console.error('Logging Error:', err.message);
   }
 }
 
